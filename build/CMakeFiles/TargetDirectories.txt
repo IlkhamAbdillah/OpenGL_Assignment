@@ -1,0 +1,3 @@
+C:/Users/ilham/OneDrive/Documents/aUGM 2024/Semester 4/TVG/OpenGL/setup/build/CMakeFiles/hello_window.dir
+C:/Users/ilham/OneDrive/Documents/aUGM 2024/Semester 4/TVG/OpenGL/setup/build/CMakeFiles/edit_cache.dir
+C:/Users/ilham/OneDrive/Documents/aUGM 2024/Semester 4/TVG/OpenGL/setup/build/CMakeFiles/rebuild_cache.dir
