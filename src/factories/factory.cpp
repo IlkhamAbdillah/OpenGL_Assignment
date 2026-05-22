@@ -41,7 +41,7 @@ void Factory::make_cube(glm::vec3 position, glm::vec3 eulers,
 	physicsComponents[entities_made] = physics;
 	
 	RenderComponent render = make_cube_mesh({0.25f, 0.25f, 0.25f});
-	render.material = make_texture("img/paper.jpg");
+	render.material = make_texture("img/kucing_mewing.jpg");
 	renderComponents[entities_made++] = render;
 }
 
@@ -59,7 +59,7 @@ void Factory::make_furina(glm::vec3 position, glm::vec3 eulers) {
         glm::radians(90.0f), { 0.0f, 1.0f, 0.0f });
 	RenderComponent render = make_obj_mesh(
         "models/furina/furina.obj", preTransform);
-	render.material = make_texture("models/furina/textures/material_1_baseColor.png");
+	render.material = make_texture("img/mask.jpg");
 	renderComponents[entities_made++] = render;
 }
 

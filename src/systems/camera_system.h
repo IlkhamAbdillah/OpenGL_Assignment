@@ -21,6 +21,6 @@ private:
     float verticalVelocity = 0.0f;
     bool isJumping = false;
     const float JUMP_FORCE = 1.5f;
-    const float GRAVITY = 1.0f;
+    const float GRAVITY = 0.5f;
     bool spacePressed = false;
 };

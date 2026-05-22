@@ -45,12 +45,19 @@ CMakeFiles/hello_window.dir/src/triangle_mesh.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/type_traits \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/move.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/utility.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/compare \
+ C:/msys64/ucrt64/include/c++/13.2.0/concepts \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_iterator_base_types.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/iterator_concepts.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/ptr_traits.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/ranges_cmp.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_iterator_base_funcs.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/concept_check.h \
  C:/msys64/ucrt64/include/c++/13.2.0/debug/assertions.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_iterator.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/ptr_traits.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/new \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/exception.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_construct.h \
  C:/msys64/ucrt64/include/c++/13.2.0/debug/debug.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/predefined_ops.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bit \
@@ -213,6 +220,58 @@ CMakeFiles/hello_window.dir/src/triangle_mesh.cpp.obj: \
  C:/Users/ilham/OneDrive/DOCUME~1/AUGM20~1/SEMEST~4/TVG/OpenGL/setup/DEPEND~1/glm/detail/type_half.inl \
  C:/Users/ilham/OneDrive/DOCUME~1/AUGM20~1/SEMEST~4/TVG/OpenGL/setup/DEPEND~1/glm/integer.hpp \
  C:/Users/ilham/OneDrive/DOCUME~1/AUGM20~1/SEMEST~4/TVG/OpenGL/setup/DEPEND~1/glm/detail/func_integer.inl \
+ C:/Users/ilham/OneDrive/DOCUME~1/AUGM20~1/SEMEST~4/TVG/OpenGL/setup/DEPEND~1/glm/gtc/matrix_transform.hpp \
+ C:/Users/ilham/OneDrive/DOCUME~1/AUGM20~1/SEMEST~4/TVG/OpenGL/setup/DEPEND~1/glm/gtc/../ext/matrix_projection.hpp \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/gtc/constants.hpp \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/ext/scalar_constants.hpp \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/ext/scalar_constants.inl \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/gtc/constants.inl \
+ C:/Users/ilham/OneDrive/DOCUME~1/AUGM20~1/SEMEST~4/TVG/OpenGL/setup/DEPEND~1/glm/gtc/../ext/matrix_projection.inl \
+ C:/Users/ilham/OneDrive/DOCUME~1/AUGM20~1/SEMEST~4/TVG/OpenGL/setup/DEPEND~1/glm/gtc/../ext/matrix_clip_space.hpp \
+ C:/Users/ilham/OneDrive/DOCUME~1/AUGM20~1/SEMEST~4/TVG/OpenGL/setup/DEPEND~1/glm/gtc/../ext/matrix_clip_space.inl \
+ C:/Users/ilham/OneDrive/DOCUME~1/AUGM20~1/SEMEST~4/TVG/OpenGL/setup/DEPEND~1/glm/gtc/../ext/matrix_transform.hpp \
+ C:/Users/ilham/OneDrive/DOCUME~1/AUGM20~1/SEMEST~4/TVG/OpenGL/setup/DEPEND~1/glm/gtc/../ext/matrix_transform.inl \
+ C:/Users/ilham/OneDrive/DOCUME~1/AUGM20~1/SEMEST~4/TVG/OpenGL/setup/DEPEND~1/glm/gtc/matrix_transform.inl \
+ C:/Users/ilham/OneDrive/DOCUME~1/AUGM20~1/SEMEST~4/TVG/OpenGL/setup/DEPEND~1/glm/gtc/type_ptr.hpp \
+ C:/Users/ilham/OneDrive/DOCUME~1/AUGM20~1/SEMEST~4/TVG/OpenGL/setup/DEPEND~1/glm/gtc/../gtc/quaternion.hpp \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/ext/vector_relational.hpp \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/ext/vector_relational.inl \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/detail/type_float.hpp \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/ext/quaternion_common.hpp \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/ext/quaternion_geometric.hpp \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/ext/quaternion_geometric.inl \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/ext/quaternion_common.inl \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/ext/quaternion_float.hpp \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/detail/type_quat.hpp \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/ext/quaternion_relational.hpp \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/ext/quaternion_relational.inl \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/detail/type_quat.inl \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/ext/quaternion_float_precision.hpp \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/ext/quaternion_double.hpp \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/ext/quaternion_double_precision.hpp \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/ext/quaternion_trigonometric.hpp \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/ext/quaternion_trigonometric.inl \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/ext/quaternion_transform.hpp \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/ext/quaternion_transform.inl \
+ C:/Users/ilham/OneDrive/DOCUME~1/AUGM20~1/SEMEST~4/TVG/OpenGL/setup/DEPEND~1/glm/gtc/../gtc/quaternion.inl \
+ C:/Users/ilham/OneDrive/DOCUME~1/AUGM20~1/SEMEST~4/TVG/OpenGL/setup/DEPEND~1/glm/gtc/../gtc/epsilon.hpp \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/detail/setup.hpp \
+ C:/Users/ilham/OneDrive/DOCUME~1/AUGM20~1/SEMEST~4/TVG/OpenGL/setup/DEPEND~1/glm/gtc/../gtc/epsilon.inl \
+ C:/Users/ilham/OneDrive/DOCUME~1/AUGM20~1/SEMEST~4/TVG/OpenGL/setup/DEPEND~1/glm/gtc/../gtc/vec1.hpp \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/ext/vector_bool1.hpp \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/ext/vector_bool1_precision.hpp \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/ext/vector_float1.hpp \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/ext/vector_float1_precision.hpp \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/ext/vector_double1.hpp \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/ext/vector_double1_precision.hpp \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/ext/vector_int1.hpp \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/ext/vector_int1_sized.hpp \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/ext/vector_uint1.hpp \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/dependencies/glm/ext/vector_uint1_sized.hpp \
+ C:/msys64/ucrt64/include/c++/13.2.0/cstring \
+ C:/msys64/ucrt64/include/string.h \
+ C:/msys64/ucrt64/include/sec_api/string_s.h \
+ C:/Users/ilham/OneDrive/DOCUME~1/AUGM20~1/SEMEST~4/TVG/OpenGL/setup/DEPEND~1/glm/gtc/type_ptr.inl \
  C:/msys64/ucrt64/include/c++/13.2.0/iostream \
  C:/msys64/ucrt64/include/c++/13.2.0/ostream \
  C:/msys64/ucrt64/include/c++/13.2.0/ios \
@@ -228,12 +287,10 @@ CMakeFiles/hello_window.dir/src/triangle_mesh.cpp.obj: \
  C:/msys64/ucrt64/include/swprintf.inl \
  C:/msys64/ucrt64/include/sec_api/wchar_s.h \
  C:/msys64/ucrt64/include/c++/13.2.0/exception \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/exception.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/exception_ptr.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/cxxabi_init_exception.h \
  C:/msys64/ucrt64/include/c++/13.2.0/typeinfo \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/hash_bytes.h \
- C:/msys64/ucrt64/include/c++/13.2.0/new \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/nested_exception.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/char_traits.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/localefwd.h \
@@ -275,9 +332,11 @@ CMakeFiles/hello_window.dir/src/triangle_mesh.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/basic_string.h \
  C:/msys64/ucrt64/include/c++/13.2.0/ext/alloc_traits.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/alloc_traits.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_construct.h \
  C:/msys64/ucrt64/include/c++/13.2.0/string_view \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/functional_hash.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/ranges_base.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/max_size_type.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/numbers \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/string_view.tcc \
  C:/msys64/ucrt64/include/c++/13.2.0/ext/string_conversions.h \
  C:/msys64/ucrt64/include/c++/13.2.0/cstdio \
@@ -288,6 +347,7 @@ CMakeFiles/hello_window.dir/src/triangle_mesh.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/uses_allocator.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/uses_allocator_args.h \
  C:/msys64/ucrt64/include/c++/13.2.0/tuple \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/ranges_util.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.tcc \
  C:/msys64/ucrt64/include/c++/13.2.0/system_error \
  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/error_constants.h \
@@ -311,6 +371,14 @@ CMakeFiles/hello_window.dir/src/triangle_mesh.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_vector.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_bvector.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/vector.tcc \
+ C:/msys64/ucrt64/include/c++/13.2.0/unordered_map \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/unordered_map.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/hashtable.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/hashtable_policy.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/ext/aligned_buffer.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/enable_special_members.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/node_handle.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/erase_if.h \
  C:/msys64/ucrt64/include/c++/13.2.0/fstream \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/codecvt.h \
  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/basic_file.h \
