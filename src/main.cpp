@@ -16,7 +16,7 @@ int main() {
 		app->renderComponents, app->transformComponents);
 	
 	factory->make_furina({5.0f, 0.0f, 0.0f}, {0.0f, 0.0f, 180.0f});
-
+	factory->make_grassfield({5.0f, 0.0f, 0.0f});
 	factory->make_cube({5.0f, -3.0f, 0.0f}, {0.0f, 0.0f, 180.0f}, {10.0f, 10.0f, 10.0f});
 
 	unsigned int cameraEntity = factory->make_camera(

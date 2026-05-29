@@ -23,10 +23,19 @@ void RenderSystem::update(
         glUniformMatrix4fv(
 		    modelLocation, 1, GL_FALSE, 
 		    glm::value_ptr(model));
-        
-        glBindTexture(GL_TEXTURE_2D, renderable.material);
-        glBindVertexArray(renderable.VAO);
-	    glDrawArrays(GL_TRIANGLES, 0, renderable.vertexCount);
+
+        if (renderable.materials.empty() || renderable.VAOs.empty() || renderable.vertexCounts.empty()) {
+            glBindTexture(GL_TEXTURE_2D, renderable.material);
+            glBindVertexArray(renderable.VAO);
+	        glDrawArrays(GL_TRIANGLES, 0, renderable.vertexCount);
+            continue;
+        }
+
+        for (size_t i = 0; i < renderable.VAOs.size(); ++i) {
+            glBindTexture(GL_TEXTURE_2D, renderable.materials[i]);
+            glBindVertexArray(renderable.VAOs[i]);
+            glDrawArrays(GL_TRIANGLES, 0, renderable.vertexCounts[i]);
+        }
     }
 	glfwSwapBuffers(window);
 }

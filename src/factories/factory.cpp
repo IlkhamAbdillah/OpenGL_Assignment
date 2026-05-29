@@ -59,7 +59,22 @@ void Factory::make_furina(glm::vec3 position, glm::vec3 eulers) {
         glm::radians(90.0f), { 0.0f, 1.0f, 0.0f });
 	RenderComponent render = make_obj_mesh(
         "models/furina/furina.obj", preTransform);
-	render.material = make_texture("img/mask.jpg");
+	renderComponents[entities_made++] = render;
+}
+
+void Factory::make_grassfield(glm::vec3 position) {
+
+	TransformComponent transform;
+	transform.position = position;
+	transformComponents[entities_made] = transform;
+	
+    glm::mat4 preTransform = glm::mat4(1.0f);
+	preTransform = glm::rotate(preTransform, 
+        glm::radians(90.0f), { 1.0f, 0.0f, 0.0f });
+    preTransform = glm::rotate(preTransform, 
+        glm::radians(90.0f), { 0.0f, 1.0f, 0.0f });
+	RenderComponent render = make_obj_mesh(
+        "models/grassfield/grassfield.obj", preTransform);
 	renderComponents[entities_made++] = render;
 }
 
@@ -146,51 +161,23 @@ RenderComponent Factory::make_obj_mesh(
     std::vector<glm::vec3> v;
     std::vector<glm::vec2> vt;
     std::vector<glm::vec3> vn;
-    std::vector<float> vertices;
-
-    size_t vertexCount = 0;
-    size_t texcoordCount = 0;
-    size_t normalCount = 0;
-    size_t triangleCount = 0;
+    std::unordered_map<std::string, std::vector<float>> materialVertices;
+    std::unordered_map<std::string, unsigned int> materialTextures;
+    std::vector<std::string> materialOrder;
+    std::unordered_map<std::string, size_t> materialIndices;
 
     std::string line;
     std::vector<std::string> words;
+    std::string currentMaterial = "__default__";
 
     std::ifstream file;
-
     file.open(filepath);
     while (std::getline(file, line)) {
 
         words = split(line, " ");
-
-        if (!words[0].compare("v")) {
-            ++vertexCount;
+        if (words.empty()) {
+            continue;
         }
-
-        else if (!words[0].compare("vt")) {
-            ++texcoordCount;
-        }
-
-        else if (!words[0].compare("vn")) {
-            ++normalCount;
-        }
-
-        else if (!words[0].compare("f")) {
-            triangleCount += words.size() - 3;
-        }
-    }
-    file.close();
-
-    v.reserve(vertexCount);
-    vt.reserve(texcoordCount);
-    vn.reserve(normalCount);
-    //three corners per triangle, 8 floats per corner
-    vertices.reserve(triangleCount * 3 * 8);
-
-    file.open(filepath);
-    while (std::getline(file, line)) {
-
-        words = split(line, " ");
 
         if (!words[0].compare("v")) {
             v.push_back(read_vec3(words, preTransform, 1.0f));
@@ -204,36 +191,89 @@ RenderComponent Factory::make_obj_mesh(
             vn.push_back(read_vec3(words, preTransform, 0.0f));
         }
 
+        else if (!words[0].compare("usemtl") && words.size() > 1) {
+            currentMaterial = words[1];
+            if (materialIndices.find(currentMaterial) == materialIndices.end()) {
+                materialIndices[currentMaterial] = materialOrder.size();
+                materialOrder.push_back(currentMaterial);
+            }
+        }
+
         else if (!words[0].compare("f")) {
-            read_face(words, v, vt, vn, vertices);
+            if (materialVertices.find(currentMaterial) == materialVertices.end()) {
+                materialVertices[currentMaterial] = std::vector<float>();
+            }
+            read_face(words, v, vt, vn, materialVertices[currentMaterial]);
         }
     }
     file.close();
 
-    unsigned int VAO;
-    glGenVertexArrays(1, &VAO);
-    VAOs.push_back(VAO);
-    glBindVertexArray(VAO);
+    std::string objPath = filepath;
+    std::string mtlPath = objPath;
+    size_t lastDot = objPath.find_last_of('.');
+    size_t lastSlash = objPath.find_last_of("/\\");
+    if (lastDot != std::string::npos && (lastSlash == std::string::npos || lastDot > lastSlash)) {
+        mtlPath.replace(lastDot, objPath.size() - lastDot, ".mtl");
+    } else {
+        mtlPath += ".mtl";
+    }
 
-    unsigned int VBO;
-    glGenBuffers(1, &VBO);
-    VBOs.push_back(VBO);
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(float), 
-        vertices.data(), GL_STATIC_DRAW);
-    //position
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 32, (void*)0);
-    glEnableVertexAttribArray(0);
-    //texture coordinates
-    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 32, (void*)12);
-    glEnableVertexAttribArray(1);
-    //normal
-    glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, 32, (void*)20);
-    glEnableVertexAttribArray(2);
+    if (std::ifstream(mtlPath).good()) {
+        materialTextures = load_material_textures(mtlPath.c_str());
+    }
+
+    std::vector<unsigned int> submeshMaterials;
+    std::vector<unsigned int> submeshVAOs;
+    std::vector<unsigned int> submeshVertexCounts;
+
+    for (const std::string& materialName : materialOrder) {
+        std::vector<float>& vertices = materialVertices[materialName];
+        if (vertices.empty()) {
+            continue;
+        }
+
+        unsigned int VAO;
+        glGenVertexArrays(1, &VAO);
+        VAOs.push_back(VAO);
+        glBindVertexArray(VAO);
+
+        unsigned int VBO;
+        glGenBuffers(1, &VBO);
+        VBOs.push_back(VBO);
+        glBindBuffer(GL_ARRAY_BUFFER, VBO);
+        glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(float), 
+            vertices.data(), GL_STATIC_DRAW);
+        //position
+        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 32, (void*)0);
+        glEnableVertexAttribArray(0);
+        //texture coordinates
+        glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 32, (void*)12);
+        glEnableVertexAttribArray(1);
+        //normal
+        glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, 32, (void*)20);
+        glEnableVertexAttribArray(2);
+
+        unsigned int materialTexture = 0;
+        if (materialTextures.find(materialName) != materialTextures.end()) {
+            materialTexture = materialTextures[materialName];
+        } else if (!materialTextures.empty()) {
+            materialTexture = materialTextures.begin()->second;
+        } else {
+            materialTexture = make_texture("img/paper.jpg");
+        }
+
+        submeshMaterials.push_back(materialTexture);
+        submeshVAOs.push_back(VAO);
+        submeshVertexCounts.push_back(vertices.size() / 8);
+    }
 
     RenderComponent render;
-    render.VAO = VAO;
-    render.vertexCount = vertices.size() / 8;
+    render.VAO = submeshVAOs.empty() ? 0 : submeshVAOs[0];
+    render.material = submeshMaterials.empty() ? 0 : submeshMaterials[0];
+    render.vertexCount = submeshVertexCounts.empty() ? 0 : submeshVertexCounts[0];
+    render.VAOs = submeshVAOs;
+    render.materials = submeshMaterials;
+    render.vertexCounts = submeshVertexCounts;
     return render;
 }
 
@@ -295,6 +335,11 @@ unsigned int Factory::make_texture(const char* filename) {
 	unsigned char* data = stbi_load(
         filename, &width, &height, &channels, STBI_rgb_alpha);
 
+    if (data == nullptr) {
+        std::cerr << "Failed to load texture: " << filename << std::endl;
+        return 0;
+    }
+
 	//make the texture
     unsigned int texture;
 	glGenTextures(1, &texture);
@@ -319,44 +364,51 @@ unsigned int Factory::make_texture(const char* filename) {
     return texture;
 }
 
-unsigned int Factory::make_texture_from_mtl(const char* mtl_filepath, const char* default_texture) {
-    
-    std::string texturePath = "";
-    std::string line;
-    std::vector<std::string> words;
-    std::ifstream file;
-    
-    // Get the directory of the MTL file
-    std::string mtl_dir = "";
-    std::string mtl_path = mtl_filepath;
-    size_t lastSlash = mtl_path.find_last_of("/\\");
+std::unordered_map<std::string, unsigned int> Factory::load_material_textures(const char* mtl_filepath) {
+    std::unordered_map<std::string, unsigned int> materialTextures;
+    std::string mtlPath = mtl_filepath;
+    std::string mtlDir = "";
+    size_t lastSlash = mtlPath.find_last_of("/\\");
     if (lastSlash != std::string::npos) {
-        mtl_dir = mtl_path.substr(0, lastSlash + 1);
+        mtlDir = mtlPath.substr(0, lastSlash + 1);
     }
-    
-    // Read MTL file to find texture map
-    file.open(mtl_filepath);
-    if (file.is_open()) {
-        while (std::getline(file, line)) {
-            words = split(line, " ");
-            
-            // Look for map_Kd (diffuse texture map)
-            if (!words.empty() && !words[0].compare("map_Kd")) {
-                if (words.size() > 1) {
-                    texturePath = mtl_dir + words[1];
-                    std::cout << "Found texture in MTL: " << texturePath << std::endl;
-                    break;
-                }
-            }
+
+    std::ifstream file(mtlPath);
+    if (!file.is_open()) {
+        return materialTextures;
+    }
+
+    std::string currentMaterial;
+    std::string line;
+    while (std::getline(file, line)) {
+        std::vector<std::string> words = split(line, " ");
+        if (words.empty()) {
+            continue;
         }
-        file.close();
+
+        if (!words[0].compare("newmtl") && words.size() > 1) {
+            currentMaterial = words[1];
+        }
+
+        else if (!words[0].compare("map_Kd") && words.size() > 1 && !currentMaterial.empty()) {
+            std::string texturePath = words[1];
+            if (texturePath.find("://") == std::string::npos &&
+                (texturePath.empty() || texturePath[0] != '/' && (texturePath.size() < 2 || texturePath[1] != ':'))) {
+                texturePath = mtlDir + texturePath;
+            }
+
+            materialTextures[currentMaterial] = make_texture(texturePath.c_str());
+        }
     }
-    
-    // If no texture found in MTL, use default
-    if (texturePath.empty()) {
-        std::cout << "No texture found in MTL file, using default: " << default_texture << std::endl;
-        texturePath = default_texture;
+
+    return materialTextures;
+}
+
+unsigned int Factory::make_texture_from_mtl(const char* mtl_filepath, const char* default_texture) {
+    std::unordered_map<std::string, unsigned int> materialTextures = load_material_textures(mtl_filepath);
+    if (materialTextures.empty()) {
+        return make_texture(default_texture);
     }
-    
-    return make_texture(texturePath.c_str());
+
+    return materialTextures.begin()->second;
 }

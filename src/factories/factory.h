@@ -21,6 +21,7 @@ public:
         glm::vec3 eulerVelocity);
     
     void make_furina(glm::vec3 position, glm::vec3 eulers);
+    void make_grassfield(glm::vec3 position);
 
 private:
 
@@ -35,18 +36,12 @@ private:
     std::vector<unsigned int> textures;
 
     RenderComponent make_cube_mesh(glm::vec3 size);
-    RenderComponent make_obj_mesh(
-        const char* filepath, glm::mat4 preTransform);
+    RenderComponent make_obj_mesh(const char* filepath, glm::mat4 preTransform);
     unsigned int make_texture(const char* filename);
+    std::unordered_map<std::string, unsigned int> load_material_textures(const char* mtl_filepath);
     unsigned int make_texture_from_mtl(const char* mtl_filepath, const char* default_texture);
-    glm::vec3 read_vec3(std::vector<std::string> words, 
-        glm::mat4 preTransform, float w);
+    glm::vec3 read_vec3(std::vector<std::string> words, glm::mat4 preTransform, float w);
     glm::vec2 read_vec2(std::vector<std::string> words);
-    void read_face(std::vector<std::string> words, 
-        std::vector<glm::vec3>& v, std::vector<glm::vec2>& vt, 
-        std::vector<glm::vec3>& vn, std::vector<float>& vertices);
-    void read_corner(std::string description, 
-        std::vector<glm::vec3>& v, std::vector<glm::vec2>& vt, 
-        std::vector<glm::vec3>& vn, std::vector<float>& vertices);
-
+    void read_face(std::vector<std::string> words, std::vector<glm::vec3>& v, std::vector<glm::vec2>& vt, std::vector<glm::vec3>& vn, std::vector<float>& vertices);
+    void read_corner(std::string description, std::vector<glm::vec3>& v, std::vector<glm::vec2>& vt, std::vector<glm::vec3>& vn, std::vector<float>& vertices);
 };
