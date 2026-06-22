@@ -37,6 +37,7 @@ private:
 
     RenderComponent make_cube_mesh(glm::vec3 size);
     RenderComponent make_obj_mesh(const char* filepath, glm::mat4 preTransform);
+    float compute_obj_radius(const char* filepath);
     unsigned int make_texture(const char* filename);
     std::unordered_map<std::string, unsigned int> load_material_textures(const char* mtl_filepath);
     unsigned int make_texture_from_mtl(const char* mtl_filepath, const char* default_texture);

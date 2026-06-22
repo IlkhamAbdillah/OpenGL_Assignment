@@ -1,5 +1,7 @@
 #include "factory.h"
 #include "../stb_image.h"
+#include <algorithm>
+#include <cfloat>
 
 Factory::Factory(
     std::unordered_map<unsigned int, PhysicsComponent>& physicsComponents,
@@ -24,6 +26,12 @@ unsigned int Factory::make_camera(glm::vec3 position, glm::vec3 eulers) {
 
     transformComponents[entities_made] = transform;
 
+    PhysicsComponent physics;
+    physics.velocity = {0.0f, 0.0f, 0.0f};
+    physics.eulerVelocity = {0.0f, 0.0f, 0.0f};
+    physics.radius = 0.25f;
+    physicsComponents[entities_made] = physics;
+
     return entities_made++;
 }
 
@@ -38,11 +46,47 @@ void Factory::make_cube(glm::vec3 position, glm::vec3 eulers,
 	PhysicsComponent physics;
 	physics.velocity = {0.0f, 0.0f, 0.0f};
 	physics.eulerVelocity = eulerVelocity;
+	physics.radius = glm::length(glm::vec3(0.25f, 0.25f, 0.25f));
 	physicsComponents[entities_made] = physics;
 	
 	RenderComponent render = make_cube_mesh({0.25f, 0.25f, 0.25f});
 	render.material = make_texture("img/kucing_mewing.jpg");
 	renderComponents[entities_made++] = render;
+}
+
+float Factory::compute_obj_radius(const char* filepath) {
+    std::ifstream file(filepath);
+    if (!file.is_open()) {
+        return 0.0f;
+    }
+
+    std::string line;
+    bool foundVertex = false;
+    glm::vec3 minBounds(FLT_MAX);
+    glm::vec3 maxBounds(-FLT_MAX);
+
+    while (std::getline(file, line)) {
+        std::vector<std::string> words = split(line, " ");
+        if (words.empty() || words[0] != "v" || words.size() < 4) {
+            continue;
+        }
+
+        glm::vec3 position(
+            std::stof(words[1]),
+            std::stof(words[2]),
+            std::stof(words[3]));
+
+        minBounds = glm::min(minBounds, position);
+        maxBounds = glm::max(maxBounds, position);
+        foundVertex = true;
+    }
+
+    if (!foundVertex) {
+        return 0.0f;
+    }
+
+    glm::vec3 extents = maxBounds - minBounds;
+    return std::max(extents.x, std::max(extents.y, extents.z)) * 0.5f;
 }
 
 void Factory::make_furina(glm::vec3 position, glm::vec3 eulers) {
@@ -51,6 +95,15 @@ void Factory::make_furina(glm::vec3 position, glm::vec3 eulers) {
 	transform.position = position;
 	transform.eulers = eulers;
 	transformComponents[entities_made] = transform;
+
+	PhysicsComponent physics;
+	physics.velocity = {0.0f, 0.0f, 0.0f};
+	physics.eulerVelocity = {0.0f, 0.0f, 0.0f};
+	physics.radius = compute_obj_radius("models/furina/furina.obj");
+	if (physics.radius <= 0.0f) {
+		physics.radius = 1.0f;
+	}
+	physicsComponents[entities_made] = physics;
 	
     glm::mat4 preTransform = glm::mat4(1.0f);
 	preTransform = glm::rotate(preTransform, 

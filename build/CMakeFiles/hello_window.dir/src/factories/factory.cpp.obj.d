@@ -390,4 +390,14 @@ CMakeFiles/hello_window.dir/src/factories/factory.cpp.obj: \
  C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/src/components/physics_component.h \
  C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/src/components/render_component.h \
  C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/src/components/transform_component.h \
- C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/src/stb_image.h
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/src/stb_image.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/algorithm \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_algo.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/algorithmfwd.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_heap.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/uniform_int_dist.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_tempbuf.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/ranges_algo.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/ranges_algobase.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/pstl/glue_algorithm_defs.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/pstl/execution_defs.h

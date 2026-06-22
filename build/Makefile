@@ -272,6 +272,30 @@ src/systems/camera_system.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_window.dir\build.make CMakeFiles/hello_window.dir/src/systems/camera_system.cpp.s
 .PHONY : src/systems/camera_system.cpp.s
 
+src/systems/collision_system.obj: src/systems/collision_system.cpp.obj
+.PHONY : src/systems/collision_system.obj
+
+# target to build an object file
+src/systems/collision_system.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_window.dir\build.make CMakeFiles/hello_window.dir/src/systems/collision_system.cpp.obj
+.PHONY : src/systems/collision_system.cpp.obj
+
+src/systems/collision_system.i: src/systems/collision_system.cpp.i
+.PHONY : src/systems/collision_system.i
+
+# target to preprocess a source file
+src/systems/collision_system.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_window.dir\build.make CMakeFiles/hello_window.dir/src/systems/collision_system.cpp.i
+.PHONY : src/systems/collision_system.cpp.i
+
+src/systems/collision_system.s: src/systems/collision_system.cpp.s
+.PHONY : src/systems/collision_system.s
+
+# target to generate assembly for a file
+src/systems/collision_system.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_window.dir\build.make CMakeFiles/hello_window.dir/src/systems/collision_system.cpp.s
+.PHONY : src/systems/collision_system.cpp.s
+
 src/systems/motion_system.obj: src/systems/motion_system.cpp.obj
 .PHONY : src/systems/motion_system.obj
 
@@ -395,6 +419,9 @@ help:
 	@echo ... src/systems/camera_system.obj
 	@echo ... src/systems/camera_system.i
 	@echo ... src/systems/camera_system.s
+	@echo ... src/systems/collision_system.obj
+	@echo ... src/systems/collision_system.i
+	@echo ... src/systems/collision_system.s
 	@echo ... src/systems/motion_system.obj
 	@echo ... src/systems/motion_system.i
 	@echo ... src/systems/motion_system.s

@@ -146,11 +146,26 @@ CMakeFiles/hello_window.dir/src/systems/camera_system.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hello_window.dir/src/systems/camera_system.cpp.s"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ilham\OneDrive\Documents\aUGM 2024\Semester 4\TVG\OpenGL\setup\src\systems\camera_system.cpp" -o CMakeFiles\hello_window.dir\src\systems\camera_system.cpp.s
 
+CMakeFiles/hello_window.dir/src/systems/collision_system.cpp.obj: CMakeFiles/hello_window.dir/flags.make
+CMakeFiles/hello_window.dir/src/systems/collision_system.cpp.obj: CMakeFiles/hello_window.dir/includes_CXX.rsp
+CMakeFiles/hello_window.dir/src/systems/collision_system.cpp.obj: C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/src/systems/collision_system.cpp
+CMakeFiles/hello_window.dir/src/systems/collision_system.cpp.obj: CMakeFiles/hello_window.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\ilham\OneDrive\Documents\aUGM 2024\Semester 4\TVG\OpenGL\setup\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/hello_window.dir/src/systems/collision_system.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hello_window.dir/src/systems/collision_system.cpp.obj -MF CMakeFiles\hello_window.dir\src\systems\collision_system.cpp.obj.d -o CMakeFiles\hello_window.dir\src\systems\collision_system.cpp.obj -c "C:\Users\ilham\OneDrive\Documents\aUGM 2024\Semester 4\TVG\OpenGL\setup\src\systems\collision_system.cpp"
+
+CMakeFiles/hello_window.dir/src/systems/collision_system.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hello_window.dir/src/systems/collision_system.cpp.i"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ilham\OneDrive\Documents\aUGM 2024\Semester 4\TVG\OpenGL\setup\src\systems\collision_system.cpp" > CMakeFiles\hello_window.dir\src\systems\collision_system.cpp.i
+
+CMakeFiles/hello_window.dir/src/systems/collision_system.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hello_window.dir/src/systems/collision_system.cpp.s"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ilham\OneDrive\Documents\aUGM 2024\Semester 4\TVG\OpenGL\setup\src\systems\collision_system.cpp" -o CMakeFiles\hello_window.dir\src\systems\collision_system.cpp.s
+
 CMakeFiles/hello_window.dir/src/systems/motion_system.cpp.obj: CMakeFiles/hello_window.dir/flags.make
 CMakeFiles/hello_window.dir/src/systems/motion_system.cpp.obj: CMakeFiles/hello_window.dir/includes_CXX.rsp
 CMakeFiles/hello_window.dir/src/systems/motion_system.cpp.obj: C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/src/systems/motion_system.cpp
 CMakeFiles/hello_window.dir/src/systems/motion_system.cpp.obj: CMakeFiles/hello_window.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\ilham\OneDrive\Documents\aUGM 2024\Semester 4\TVG\OpenGL\setup\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/hello_window.dir/src/systems/motion_system.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\ilham\OneDrive\Documents\aUGM 2024\Semester 4\TVG\OpenGL\setup\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/hello_window.dir/src/systems/motion_system.cpp.obj"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hello_window.dir/src/systems/motion_system.cpp.obj -MF CMakeFiles\hello_window.dir\src\systems\motion_system.cpp.obj.d -o CMakeFiles\hello_window.dir\src\systems\motion_system.cpp.obj -c "C:\Users\ilham\OneDrive\Documents\aUGM 2024\Semester 4\TVG\OpenGL\setup\src\systems\motion_system.cpp"
 
 CMakeFiles/hello_window.dir/src/systems/motion_system.cpp.i: cmake_force
@@ -165,7 +180,7 @@ CMakeFiles/hello_window.dir/src/systems/render_system.cpp.obj: CMakeFiles/hello_
 CMakeFiles/hello_window.dir/src/systems/render_system.cpp.obj: CMakeFiles/hello_window.dir/includes_CXX.rsp
 CMakeFiles/hello_window.dir/src/systems/render_system.cpp.obj: C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/src/systems/render_system.cpp
 CMakeFiles/hello_window.dir/src/systems/render_system.cpp.obj: CMakeFiles/hello_window.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\ilham\OneDrive\Documents\aUGM 2024\Semester 4\TVG\OpenGL\setup\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/hello_window.dir/src/systems/render_system.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\ilham\OneDrive\Documents\aUGM 2024\Semester 4\TVG\OpenGL\setup\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/hello_window.dir/src/systems/render_system.cpp.obj"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hello_window.dir/src/systems/render_system.cpp.obj -MF CMakeFiles\hello_window.dir\src\systems\render_system.cpp.obj.d -o CMakeFiles\hello_window.dir\src\systems\render_system.cpp.obj -c "C:\Users\ilham\OneDrive\Documents\aUGM 2024\Semester 4\TVG\OpenGL\setup\src\systems\render_system.cpp"
 
 CMakeFiles/hello_window.dir/src/systems/render_system.cpp.i: cmake_force
@@ -180,7 +195,7 @@ CMakeFiles/hello_window.dir/src/triangle_mesh.cpp.obj: CMakeFiles/hello_window.d
 CMakeFiles/hello_window.dir/src/triangle_mesh.cpp.obj: CMakeFiles/hello_window.dir/includes_CXX.rsp
 CMakeFiles/hello_window.dir/src/triangle_mesh.cpp.obj: C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/src/triangle_mesh.cpp
 CMakeFiles/hello_window.dir/src/triangle_mesh.cpp.obj: CMakeFiles/hello_window.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\ilham\OneDrive\Documents\aUGM 2024\Semester 4\TVG\OpenGL\setup\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/hello_window.dir/src/triangle_mesh.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\ilham\OneDrive\Documents\aUGM 2024\Semester 4\TVG\OpenGL\setup\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/hello_window.dir/src/triangle_mesh.cpp.obj"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hello_window.dir/src/triangle_mesh.cpp.obj -MF CMakeFiles\hello_window.dir\src\triangle_mesh.cpp.obj.d -o CMakeFiles\hello_window.dir\src\triangle_mesh.cpp.obj -c "C:\Users\ilham\OneDrive\Documents\aUGM 2024\Semester 4\TVG\OpenGL\setup\src\triangle_mesh.cpp"
 
 CMakeFiles/hello_window.dir/src/triangle_mesh.cpp.i: cmake_force
@@ -195,7 +210,7 @@ CMakeFiles/hello_window.dir/src/view/shader.cpp.obj: CMakeFiles/hello_window.dir
 CMakeFiles/hello_window.dir/src/view/shader.cpp.obj: CMakeFiles/hello_window.dir/includes_CXX.rsp
 CMakeFiles/hello_window.dir/src/view/shader.cpp.obj: C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/src/view/shader.cpp
 CMakeFiles/hello_window.dir/src/view/shader.cpp.obj: CMakeFiles/hello_window.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\ilham\OneDrive\Documents\aUGM 2024\Semester 4\TVG\OpenGL\setup\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/hello_window.dir/src/view/shader.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\ilham\OneDrive\Documents\aUGM 2024\Semester 4\TVG\OpenGL\setup\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/hello_window.dir/src/view/shader.cpp.obj"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hello_window.dir/src/view/shader.cpp.obj -MF CMakeFiles\hello_window.dir\src\view\shader.cpp.obj.d -o CMakeFiles\hello_window.dir\src\view\shader.cpp.obj -c "C:\Users\ilham\OneDrive\Documents\aUGM 2024\Semester 4\TVG\OpenGL\setup\src\view\shader.cpp"
 
 CMakeFiles/hello_window.dir/src/view/shader.cpp.i: cmake_force
@@ -210,7 +225,7 @@ CMakeFiles/hello_window.dir/src/controller/app.cpp.obj: CMakeFiles/hello_window.
 CMakeFiles/hello_window.dir/src/controller/app.cpp.obj: CMakeFiles/hello_window.dir/includes_CXX.rsp
 CMakeFiles/hello_window.dir/src/controller/app.cpp.obj: C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/src/controller/app.cpp
 CMakeFiles/hello_window.dir/src/controller/app.cpp.obj: CMakeFiles/hello_window.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\ilham\OneDrive\Documents\aUGM 2024\Semester 4\TVG\OpenGL\setup\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/hello_window.dir/src/controller/app.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\ilham\OneDrive\Documents\aUGM 2024\Semester 4\TVG\OpenGL\setup\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/hello_window.dir/src/controller/app.cpp.obj"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hello_window.dir/src/controller/app.cpp.obj -MF CMakeFiles\hello_window.dir\src\controller\app.cpp.obj.d -o CMakeFiles\hello_window.dir\src\controller\app.cpp.obj -c "C:\Users\ilham\OneDrive\Documents\aUGM 2024\Semester 4\TVG\OpenGL\setup\src\controller\app.cpp"
 
 CMakeFiles/hello_window.dir/src/controller/app.cpp.i: cmake_force
@@ -228,6 +243,7 @@ hello_window_OBJECTS = \
 "CMakeFiles/hello_window.dir/src/glad.c.obj" \
 "CMakeFiles/hello_window.dir/src/factories/factory.cpp.obj" \
 "CMakeFiles/hello_window.dir/src/systems/camera_system.cpp.obj" \
+"CMakeFiles/hello_window.dir/src/systems/collision_system.cpp.obj" \
 "CMakeFiles/hello_window.dir/src/systems/motion_system.cpp.obj" \
 "CMakeFiles/hello_window.dir/src/systems/render_system.cpp.obj" \
 "CMakeFiles/hello_window.dir/src/triangle_mesh.cpp.obj" \
@@ -242,6 +258,7 @@ hello_window.exe: CMakeFiles/hello_window.dir/src/main.cpp.obj
 hello_window.exe: CMakeFiles/hello_window.dir/src/glad.c.obj
 hello_window.exe: CMakeFiles/hello_window.dir/src/factories/factory.cpp.obj
 hello_window.exe: CMakeFiles/hello_window.dir/src/systems/camera_system.cpp.obj
+hello_window.exe: CMakeFiles/hello_window.dir/src/systems/collision_system.cpp.obj
 hello_window.exe: CMakeFiles/hello_window.dir/src/systems/motion_system.cpp.obj
 hello_window.exe: CMakeFiles/hello_window.dir/src/systems/render_system.cpp.obj
 hello_window.exe: CMakeFiles/hello_window.dir/src/triangle_mesh.cpp.obj
@@ -252,7 +269,7 @@ hello_window.exe: C:/msys64/ucrt64/lib/libglfw3.dll.a
 hello_window.exe: CMakeFiles/hello_window.dir/linkLibs.rsp
 hello_window.exe: CMakeFiles/hello_window.dir/objects1.rsp
 hello_window.exe: CMakeFiles/hello_window.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\ilham\OneDrive\Documents\aUGM 2024\Semester 4\TVG\OpenGL\setup\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable hello_window.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\ilham\OneDrive\Documents\aUGM 2024\Semester 4\TVG\OpenGL\setup\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable hello_window.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\hello_window.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

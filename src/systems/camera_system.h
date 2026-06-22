@@ -1,6 +1,7 @@
 #pragma once
 #include "../config.h"
 #include "../components/camera_component.h"
+#include "../components/physics_component.h"
 #include "../components/transform_component.h"
 
 class CameraSystem {
@@ -10,6 +11,7 @@ public:
     
     bool update(
         std::unordered_map<unsigned int,TransformComponent> &transformComponents,
+        std::unordered_map<unsigned int,PhysicsComponent> &physicsComponents,
         unsigned int cameraID, CameraComponent& cameraComponent, float dt);
     
 private:
@@ -20,7 +22,7 @@ private:
     // Jump system
     float verticalVelocity = 0.0f;
     bool isJumping = false;
-    const float JUMP_FORCE = 1.5f;
-    const float GRAVITY = 0.5f;
+    const float JUMP_FORCE = 2.0f;
+    const float GRAVITY = 0.98f;
     bool spacePressed = false;
 };

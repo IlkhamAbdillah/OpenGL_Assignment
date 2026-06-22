@@ -31,6 +31,12 @@
 },
 {
   "directory": "C:/Users/ilham/OneDrive/Documents/aUGM 2024/Semester 4/TVG/OpenGL/setup/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DGLFW_DLL @CMakeFiles/hello_window.dir/includes_CXX.rsp -g -std=gnu++20 -o CMakeFiles\\hello_window.dir\\src\\systems\\collision_system.cpp.obj -c \"C:\\Users\\ilham\\OneDrive\\Documents\\aUGM 2024\\Semester 4\\TVG\\OpenGL\\setup\\src\\systems\\collision_system.cpp\"",
+  "file": "C:/Users/ilham/OneDrive/Documents/aUGM 2024/Semester 4/TVG/OpenGL/setup/src/systems/collision_system.cpp",
+  "output": "CMakeFiles/hello_window.dir/src/systems/collision_system.cpp.obj"
+},
+{
+  "directory": "C:/Users/ilham/OneDrive/Documents/aUGM 2024/Semester 4/TVG/OpenGL/setup/build",
   "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DGLFW_DLL @CMakeFiles/hello_window.dir/includes_CXX.rsp -g -std=gnu++20 -o CMakeFiles\\hello_window.dir\\src\\systems\\motion_system.cpp.obj -c \"C:\\Users\\ilham\\OneDrive\\Documents\\aUGM 2024\\Semester 4\\TVG\\OpenGL\\setup\\src\\systems\\motion_system.cpp\"",
   "file": "C:/Users/ilham/OneDrive/Documents/aUGM 2024/Semester 4/TVG/OpenGL/setup/src/systems/motion_system.cpp",
   "output": "CMakeFiles/hello_window.dir/src/systems/motion_system.cpp.obj"

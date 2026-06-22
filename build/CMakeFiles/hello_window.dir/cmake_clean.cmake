@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/hello_window.dir/src/main.cpp.obj.d"
   "CMakeFiles/hello_window.dir/src/systems/camera_system.cpp.obj"
   "CMakeFiles/hello_window.dir/src/systems/camera_system.cpp.obj.d"
+  "CMakeFiles/hello_window.dir/src/systems/collision_system.cpp.obj"
+  "CMakeFiles/hello_window.dir/src/systems/collision_system.cpp.obj.d"
   "CMakeFiles/hello_window.dir/src/systems/motion_system.cpp.obj"
   "CMakeFiles/hello_window.dir/src/systems/motion_system.cpp.obj.d"
   "CMakeFiles/hello_window.dir/src/systems/render_system.cpp.obj"

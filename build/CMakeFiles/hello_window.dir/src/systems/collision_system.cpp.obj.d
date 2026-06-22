@@ -1,6 +1,6 @@
-CMakeFiles/hello_window.dir/src/systems/camera_system.cpp.obj: \
- C:\Users\ilham\OneDrive\Documents\aUGM\ 2024\Semester\ 4\TVG\OpenGL\setup\src\systems\camera_system.cpp \
- C:\Users\ilham\OneDrive\Documents\aUGM\ 2024\Semester\ 4\TVG\OpenGL\setup\src\systems\camera_system.h \
+CMakeFiles/hello_window.dir/src/systems/collision_system.cpp.obj: \
+ C:\Users\ilham\OneDrive\Documents\aUGM\ 2024\Semester\ 4\TVG\OpenGL\setup\src\systems\collision_system.cpp \
+ C:\Users\ilham\OneDrive\Documents\aUGM\ 2024\Semester\ 4\TVG\OpenGL\setup\src\systems\collision_system.h \
  C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/src/config.h \
  C:/Users/ilham/OneDrive/DOCUME~1/AUGM20~1/SEMEST~4/TVG/OpenGL/setup/DEPEND~1/glad/glad.h \
  C:/Users/ilham/OneDrive/DOCUME~1/AUGM20~1/SEMEST~4/TVG/OpenGL/setup/DEPEND~1/KHR/khrplatform.h \
@@ -386,6 +386,5 @@ CMakeFiles/hello_window.dir/src/systems/camera_system.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc \
  C:/msys64/ucrt64/include/c++/13.2.0/sstream \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/sstream.tcc \
- C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/src/components/camera_component.h \
- C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/src/components/physics_component.h \
- C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/src/components/transform_component.h
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/src/components/transform_component.h \
+ C:/Users/ilham/OneDrive/Documents/aUGM\ 2024/Semester\ 4/TVG/OpenGL/setup/src/components/physics_component.h

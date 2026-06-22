@@ -8,6 +8,7 @@ App::~App() {
     glDeleteProgram(shader);
 
     delete motionSystem;
+    delete collisionSystem;
     delete cameraSystem;
     delete renderSystem;
     
@@ -20,8 +21,9 @@ void App::run() {
 
         motionSystem->update(
             transformComponents, physicsComponents, 16.67f/1000.0f);
+        collisionSystem->update(transformComponents, physicsComponents);
         bool should_close = cameraSystem->update(
-            transformComponents, cameraID, *cameraComponent, 16.67f/1000.0f);
+            transformComponents, physicsComponents, cameraID, *cameraComponent, 16.67f/1000.0f);
 		if (should_close) {
 			break;
 		}
@@ -76,6 +78,7 @@ void App::set_up_opengl() {
 
 void App::make_systems() {
     motionSystem = new MotionSystem();
+    collisionSystem = new CollisionSystem();
     cameraSystem = new CameraSystem(shader, window);
     renderSystem = new RenderSystem(shader, window);
 }

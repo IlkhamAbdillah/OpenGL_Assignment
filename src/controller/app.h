@@ -7,6 +7,7 @@
 #include "../components/transform_component.h"
 
 #include "../systems/camera_system.h"
+#include "../systems/collision_system.h"
 #include "../systems/motion_system.h"
 #include "../systems/render_system.h"
 
@@ -36,6 +37,7 @@ private:
 
     //Systems
     MotionSystem* motionSystem;
+    CollisionSystem* collisionSystem;
     CameraSystem* cameraSystem;
     RenderSystem* renderSystem;
 };

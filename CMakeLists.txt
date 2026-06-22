@@ -14,6 +14,7 @@ add_executable(hello_window
     src/glad.c
     src/factories/factory.cpp
     src/systems/camera_system.cpp
+    src/systems/collision_system.cpp
     src/systems/motion_system.cpp
     src/systems/render_system.cpp
     src/triangle_mesh.cpp

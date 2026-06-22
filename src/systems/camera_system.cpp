@@ -9,6 +9,7 @@ CameraSystem::CameraSystem(unsigned int shader, GLFWwindow* window) {
 
 bool CameraSystem::update(
     std::unordered_map<unsigned int,TransformComponent> &transformComponents,
+    std::unordered_map<unsigned int,PhysicsComponent> &physicsComponents,
     unsigned int cameraID, CameraComponent& cameraComponent, float dt) {
 
     glm::vec3& pos = transformComponents[cameraID].position;
@@ -52,9 +53,49 @@ bool CameraSystem::update(
         // Horizontal movement only (ignore Z component)
         glm::vec3 horizontalForwards = glm::normalize(glm::vec3(forwards.x, forwards.y, 0.0f));
         glm::vec3 horizontalRight = glm::normalize(glm::vec3(right.x, right.y, 0.0f));
-        
-        pos += 0.01f * dPos.x * horizontalForwards;
-        pos += 0.01f * dPos.y * horizontalRight;
+
+        glm::vec3 proposedPos = pos;
+        proposedPos += 0.01f * dPos.x * horizontalForwards;
+        proposedPos += 0.01f * dPos.y * horizontalRight;
+
+        const float cameraRadius = 0.25f;
+        for (const auto& [entityID, physics] : physicsComponents) {
+            if (entityID == cameraID || physics.radius <= 0.0f) {
+                continue;
+            }
+
+            auto transformIt = transformComponents.find(entityID);
+            if (transformIt == transformComponents.end()) {
+                continue;
+            }
+
+            glm::vec3 obstaclePos = transformIt->second.position;
+            glm::vec3 delta = proposedPos - obstaclePos;
+            float distance = glm::length(delta);
+            float minDistance = cameraRadius + physics.radius;
+
+            if (distance >= minDistance) {
+                continue;
+            }
+
+            glm::vec3 normal = glm::vec3(1.0f, 0.0f, 0.0f);
+            if (distance > 0.0001f) {
+                normal = delta / distance;
+            } else {
+                glm::vec3 fallback = glm::normalize(glm::vec3(forwards.x, forwards.y, 0.0f));
+                if (glm::length(fallback) < 0.0001f) {
+                    fallback = glm::normalize(glm::vec3(right.x, right.y, 0.0f));
+                }
+                if (glm::length(fallback) < 0.0001f) {
+                    fallback = glm::vec3(1.0f, 0.0f, 0.0f);
+                }
+                normal = fallback;
+            }
+
+            proposedPos = obstaclePos + normal * minDistance;
+        }
+
+        pos = proposedPos;
     }
 
     // Clamp z to not go below 1.5
